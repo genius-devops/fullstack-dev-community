@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+     <!-- form for redirection to the internet or specific url google is bween used. -->
+     <div>
+        <form action="https://google.com/search">
+            <input type="search" name="q" autocomplete="on" autofocus placeholder="search">
+            <input type="submit" name="google search" id="google" value="google" autofocus>
+        </form>
+    </div><br>
+
+    <div>
+        <form action="#">
+        
+            <input type="text" name="state" list="state" placeholder="state" autofocus>
+            <datalist id="state">
+                <option value="abia"></option>
+                <option value="adamawa"></option>
+                <option value="akwa-ibom"></option>
+                <option value="anambra"></option>
+                <option value="bauchi"></option>
+                <option value="bayelsa"></option>
+                <option value="benue"></option>
+                <option value="cross River"></option>
+                <option value="delta"></option>
+                <option value="edo"></option>
+                <option value="ekiti"></option>
+                <option value="enugu"></option>
+                <option value="gombe"></option>
+                <option value="imo"></option>
+                <option value="jigawa"></option>
+                <option value="kaduna"></option>
+                <option value="kano"></option>
+                <option value="katsina"></option>
+                <option value="kebbi"></option>
+                <option value="kogi"></option>
+                <option value="kwara"></option>
+                <option value="lagos"></option>
+                <option value="nasarawa"></option>
+                <option value="Niger"></option>
+                <option value="ogun"></option>
+                <option value="Ondo"></option>
+                <option value="Osun"></option>
+                <option value="Oyo"></option>
+                <option value="Plateau"></option>
+                <option value="Rivers"></option>
+                <option value="Sokoto"></option>
+                <option value="Taraba"></option>
+                <option value="Yobe"></option>
+                <option value="Zamfara"></option>
+
+            </datalist>
+        </form>
+    </div><br>
+
+    <div>
+        <form action="f1.dbm" method="post">
+            <div>
+                <label for="first name">first name:</label> <input type="text" name="first name" id="first name" placeholder="first name">
+            </div><br>
+            <div>
+                <label for="last name">last name:</label> <input type="text" name="last name" id="last name" placeholder="last name">
+            </div><br>
+            <div>
+            <div>
+                <label for="email">email:</label> <input type="email" name="email" id="email" placeholder="email">
+            </div><br>
+            <div>
+                <!-- <label for="message">message</label> <textarea name="message" id="message" cols="30" rows="10"></textarea> -->
+                <label for="message">message</label> <textarea name="message" id="message" ></textarea>
+            </div><br>
+            <div>
+                <label for="gender">gender</label>
+                <select name="gender" id="gender">
+                    <option value="male">__select__</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                    <option value="other">other</option>
+                </select>
+            </div><br>
+            <div>
+                <label for="age">age</label><input type="number" name="age" id="age">
+            </div><br>
+            <div>
+                <label for="birthday">date of birth:</label><input type="date" name="birthday" id="birthday">
+            </div><br>
+            <input type="submit" name="submit" id="submit">
+            <button>click for more</button>
+        </form>
+    </div><br>
+    <div>
+        <label for="js">javaScript</label><input type="radio" name="js" id="js">
+        <label for="js">javaScript</label><input type="radio" name="js" id="js">
+        <label for="js">javaScript</label><input type="radio" name="js" id="js">
+    </div><br>
+    <div>
+        <label for="c">c</label><input type="checkbox" checked name="c" id="c">
+        <label for="c">c</label><input type="checkbox" checked name="c" id="c">
+        <label for="c">c</label><input type="checkbox" checked name="c" id="c">
+        <label for="c">c</label><input type="checkbox" checked name="c" id="c">
+    </div><br>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="enter your password" aria-describedby="password-hint" required>
+        <p>
+            password must be at least 8 characters
+        </p>
+    </div>
+    <fieldset>
+        <legend>address infor</legend>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <!-- using document.getElementById -->
+    <div>
+        <p id="msg">Javascript DOM</p>
+    </div>
+
+    <!-- using document.getElementByName -->
+    <div>
+        <input type="radio" name="lang" value="js">
+        <input type="radio" name="lang" value="py">
+    </div>
+
+    <!-- getElementBYTagName -->
+    <div>
+        <h3>tag name node list</h3>
+        <h3>tag name node list</h3>
+        <h3>tag name node list</h3>
+        <h3>tag name node list</h3>
+        <h3>tag name node list</h3>
+    </div>
+
+    <!-- getElementByClassName -->
+    <div>
+        <p class="clss-name">class name</p>
+        <p class="clss-name">class name</p>
+        <p class="clss-name">class name</p>
+
+        <!-- nesting another element -->
+        <div id="nested-id">
+            <h2 class="class-name">nested class name</h2>
+            <h2 class="class-name">nested class name</h2>
+        </div>
+    </div>
+
+    <!-- using querySelector -->
+    <div id="get-name">
+        <p class="name">my name is Adams Labaran</p>
+        <p class="name">my name is Adams Labaran</p>
+        <p class="name">my name is Adams Labaran</p>
+        <p class="name">my name is Adams Labaran</p>
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------------------------------
+4. Tranversing element
+1. selecting parent element
+2. selecting child element
+3. selecting sibling elements
+--------------------------------------------------------------------------------------------------------------------------------->
+<div class="title">
+    <p>welcome to tranversing element1</p>
+    <p>welcome to tranversing element2</p>
+    <p class="sibling">welcome to tranversing element3</p>
+    <p>welcome to tranversing element4</p>
+    <p>welcome to tranversing element5</p>
+    <p>welcome to tranversing element6</p>
+    <p>welcome to tranversing element7</p>
+    <p>welcome to tranversing element8</p>
+    <p>welcome to tranversing element9</p>
+    <p>welcome to tranversing element10</p>
+    
+<!-- 
+    using textcontent innerhtml
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Project</li>
+        let menu = document.getElementById("menu");
+        let list = document.createElement("li");
+        list.innerHTML = "Contact";
+        list.textContent ="Gallery"
+        menu.appendChild(list)
+        list.innerHTML = "<h1>Hello</h1>"
+        list.innerHTML = "<p>Hello</p>"
+        list.innerHTML = "<b>Hello</b>"
+
+    </ul>
+ -->
+
+ <!-- 
+    after method, append, prepend
+    Element.after(node, node, node, node, node)
+    Element.after(str, str, str, str, str, str)
+
+    parentNode.append(newNodes); // append accept multiple argument and string
+    parentNode.prepend(newNodes)
+-->
+
+<!--
+    insertAdjacentHTML
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Project</li>
+        let menu = document.getElementById("menu");
+
+        menu.insertAdjacentHTML(positionName, text)
+
+        menu.insertAdjacentHTML("beforeend", "<li>Bio</li>")
+        menu.insertAdjacentHTML("afterbegin", "<li>Bio</li>")
+        menu.insertAdjacentHTML("beforebegin", "<li>Bio</li>")
+        menu.insertAdjacentHTML("afterend", "<li>Bio</li>")
+        
+-->
+
+
+<!--
+    replaceChild, cloneNode, insertBefore
+    parentNode.replacechild(newChild, oldChild); removeChild
+    
+    menu.insertBefore(newNode, existingNode)
+
+    let newNode = originalNde.clonenode();
+    let newNode = menu.cloneNode()
+    let newNode = menu.cloneNode(true) this copy all the child element
+
+    let menu = document.getElementById("menu");
+    menu.removeChild(menu.lastElementChild);
+-->
+
+<!--
+    adding attribute method dynamically, getAttribute, setAttribute
+
+    <input type="text", id+"username" placeholder="username">
+    let inputBox = document.getElementBYid("username")
+
+    inputBox.attributes //from console this will show all the attribute related to username
+
+    inputBox.getAttribute("type") retun text
+    inputBox.getAttribute("id") retun username
+
+    inputBox.setAttribute("class", "user")
+
+    inputBox.removeAttribute("typeOfAttribute")
+    inputBox.removeAttribute("placeholder")
+
+    inputBox.hasAttribute("class")
+    inputBox.hasAttribute("id")
+
+-->
+<!--
+    manipulating element style
+
+    <input type="text" name="username" id="username" placeholder="username" style="background-color: red; font-size: 20px;">
+
+    let inputBox = document.querySelector("#username");
+    inputBox.style // return all the style properties
+
+    inputBox.style.fontSize
+
+    inputBox.style.padding = "10px"
+
+    inputBox.style.cssText = "width: 200px" override the normal css
+
+    inputBox.style.cssText += "width: 200px; height: 300px" concatention which adds to the css which is used to add css from js
+-->
+<!--
+    getComputedStyle() method is used to get css properties
+    
+    <style>
+        input{
+            bg-color: red;
+            font-size: 12px
+        }
+    </style>
+    
+    <input type="text" id="username" placeholder="username">
+    
+    <script>
+            let inputBox = document.getElementById("username");
+            window.getComputedStyle(inputBox).fontSize // return the value of font size
+            window.getComputedStyle(inputBox).backgroundColor // return the value of bg color
+    </script>
+-->
+
+<!--
+    className properties
+    <h1 id="title" class="main msg">Adams Labaran</h1>
+
+    <script>
+        let title = document.getElementById("title");
+
+        title.className // return all the classes that belongs to title id
+        title.className = "new" // this replace class from h1 element
+        title.className += " new" // this adds new class to h1 element
+    </script>
+
+-->
+
+<!--
+    classList property
+
+    <h1 id="title" class="main msg">Adams Labaran</h1>
+
+    <script>
+        let title = document.getElementById("title");
+
+        title.classList // return all the classes that belongs to title id
+        title.classList("new") // this add new class to h1 element
+        title.classList("new2, new3")  // this adds multiple classes class to h1 element
+
+        title.classList.remove("msg") // also accepts multiple argument
+
+        title.classList.replace("msg mac") // also accepts multiple argument
+        
+        title.classList.contain("mac") // this return true if available
+
+        title.classList.toggle("mac") // if mac available it removes it if not it adds mac
+    </script>
+-->
+  
+
+<!--
+
+    <div id="container">
+        <button type="btn">click</button>
+    </div>
+
+    <script>
+        const displayMsg = () => "btn clicked from fn"
+    </script>
+
+    event: 3 ways to assign event
+    // 1. HTML Event Handler Attributes click => "onClick"
+    <button type="btn" onClick="console.log('btn is clicked!')">click</button>
+
+    <button type="btn" onClick="console.log('event')">click</button> returns all the event attributes
+
+    <button type="btn" onClick="console.log('e.target')">click</button> returns where the event took place
+
+    <button type="btn" onClick="console.log('this')">click</button> returns where the event took place
+
+    <button type="btn" id="btn" onClick="console.log('this.id')">click</button> returns where the event took place
+
+    <button type="btn" onClick="console.log('e.type')">click</button> returns where the kind of event took place
+    
+    // function can be nested instead
+    <button type="btn" onClick="displayMsg()">click</button>
+
+-->
+
+
+<!--
+    2. adding eventHandler name in the javaScript
+
+    <div id="container">
+    <button id="btn">click here</button>
+</div>
+
+<script>
+    let btn = document.querySelector("#btn");
+    btn.onClick = function(){
+        console.log(this.id);
+    }
+</script>
+-->
+
+
+<!--
+    3. addEventListener() & removeEventLitener()
+
+    <div id="container">
+    <button id="btn">click here</button>
+</div>
+
+<script>
+    // addEventListener(event, function, useCaption);
+    // addEventListener(click, function, true/false); the 3rd is optional
+
+    let btn = document.querySelector("#btn");
+    btn.addEventListener("click", function(){
+        console.log(("button is clicked"));
+    });
+
+    btn.addEventListener("click", displayMsg)
+
+    const displayMsg = () => "button is clicked!"
+
+
+
+    // removeEventListener
+    btn.removeEventListener("click", displayMsg)
+</script>
+-->
+
+</div>
+<h1>creating element dynamically from Javascript </h1>
+<ul id="menu">
+    <li>Home</li>
+    <li>About</li>
+    <li>Blog</li>
+    <li>Project</li>
+</ul>
+    <script src="main.js">
+        
+    </script>
+</body>
+</html>

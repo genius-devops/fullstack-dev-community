@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mernstack</title>
+</head>
+<body>
+    <p id="myParagraph">this is an example of paragraph</p>
+    <button id="changeText">change text</button>
+    
+    <!-- How to Listen to Events using HTML Attributes-->
+    <button onclick="handleClick()">click me</button>
+    
+    <!-- add onClick event using js -->
+    <button id="myBtn">click from js</button>
+
+    <script>
+        const button = document.querySelector('#changeText');
+
+        function newText(event){
+            const p = document.querySelector('#myParagraph');
+            p.innerText = 'the text has been changed';
+        }
+        button.addEventListener('click', newText);
+
+        // keyyboard event and mouse event
+        document.addEventListener('keydown', event => {
+            console.log(`a key is pressed: ${event.key}`);
+        });
+
+        document.addEventListener('keyup', event => {
+            console.log(`a key is released: ${event.key}`);
+        });
+        
+        // mouse event
+        /**
+         * the most common mouse event are
+         * mousedown – the mouse button was pressed
+         * mouseup – the mouse button was released
+         * click – a click event
+         * dblclick – a double click event
+         * mousemove – when the mouse is moved over the element
+         * contextmenu – when the context menu is opened, for example on a right mouse button click
+         */ 
+       document.addEventListener('mousedown', event => {
+           console.log(`a key is pressed: ${event.key}`);
+       });
+
+       document.addEventListener('mouseup', event => {
+           console.log(`a key is released: ${event.key}`);
+       });
+
+       /**
+        * How to Remove Event Listeners|
+        * button.removeEventListener('click', newtext);
+        * however nameless function cant be removed
+        * 
+        * button.addEventListener('click', function(event){alert('button save is clicked')})
+        */
+       
+        // How to Listen to Events using HTML Attributes
+       function handleClick(event){
+        alert('the button is clicked')
+       }
+
+       // adding onClick event using js
+       const myBtn = document.querySelector('#myBtn');
+       myBtn.onClick = handleClick;
+
+       function handleClick(event){
+        alert('the button is clicked');
+       }
+
+       /**
+        * Which One Should You Use?
+        * As you can see, there are two ways you can listen to DOM events: 
+        * the addEventListener() method and the on[eventname] HTML attribute. 
+        * Which one should you use?
+        * The answer is that the addEventListener() method can be used when you need more extensibility, 
+        * and the on[eventname] can be used when you prefer things to be simple.
+        * In addition, the addEventListener() method 
+        * also allows you to attach multiple listeners to the same element as follows:
+        * addEventListener() allows you to assign more than one listener
+        * When you click on the button above, 
+        * JavaScript will execute both event listeners.
+        * This is not possible with the onclick property 
+        * because you can only assign one function as a reference at a time:
+        */
+
+        myBtn.addEventListener('click', handleClick);
+        myBtn.addEventListener('click', handleClickTwo);
+
+        function handleClick(){
+        console.log('run from handle click function');
+       }
+
+        function handleClickTwo(){
+        console.log('run from handle click function');
+       }
+       
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

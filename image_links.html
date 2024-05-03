@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, main {
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Image Links</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#menu">Menu</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to our website! Here's an image related to technology:</p>
+            <a href="https://example.com/technology" target="_blank">
+                <img src="/img/" alt="Technology Image">
+            </a>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="grid-container">
+                <a href="https://example.com/nature1" target="_blank">
+                    <img src="nature_image1.jpg" alt="Nature Image 1">
+                </a>
+                <a href="https://example.com/nature2" target="_blank">
+                    <img src="nature_image2.jpg" alt="Nature Image 2">
+                </a>
+                <a href="https://example.com/nature3" target="_blank">
+                    <img src="nature_image3.jpg" alt="Nature Image 3">
+                </a>
+            </div>
+        </section>
+        <section id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="https://example.com/food1" target="_blank"><img src="food_image1.jpg" alt="Food Image 1"> Food Item 1</a></li>
+                <li><a href="https://example.com/food2" target="_blank"><img src="food_image2.jpg" alt="Food Image 2"> Food Item 2</a></li>
+                <li><a href="https://example.com/food3" target="_blank"><img src="food_image3.jpg" alt="Food Image 3"> Food Item 3</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
+lo

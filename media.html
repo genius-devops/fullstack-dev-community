@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+</head>
+<body>
+    <!-- image  tag -->
+    <div>
+        <a href="/img/a.png" target="_blank">
+            <img src="/img/a.png" alt="image" title="my pix">
+        </a>
+    </div><br>
+    <!-- image  tag -->
+    <div>
+        <a href="/img/git.png" target="_blank">
+            <img src="/img/git.png" alt="git image" title="my pix" max-width="100%" loading="lazy" height="100%">
+        </a>
+    </div><br>
+    <!-- image  tag srcset is used for high resolution, lazy loading to help optimize image preloading, max-width for responsive -->
+    <div>
+        <figure>
+            <a href="/img/git.png" target="_blank">
+                <img src="/img/git.png" alt="git image" title="my pix" max-width="100%" loading="lazy" srcset="image.png 1*, image@2*.png 2*">
+            </a>
+            <figcaption>this is an image of github</figcaption>
+        </figure>
+       
+    </div><br>
+    <!-- audio ttag  -->
+    <div>
+        <a href="/audio/Diwani.mp3">
+            <audio controls loop>
+                <source  src="/audio/Diwani.mp3" type="audio/mp3">
+            </audio>
+        </a>
+    </div><br>
+    <!-- video tag -->
+    <div>
+        <a href="/video/vid1.mp4" target="_blank">
+            <video controls loop width="200">
+                <source  src="/video/vid1.mp4" type="video/mp4">
+            </video>
+        </a><br>
+        <a href="/video/vid2.mp4" target="_blank">
+            <video controls loop width="200">
+                <source  src="/video/vid2.mp4" type="video/mp4">
+            </video>
+        </a>
+    </div><br>
+
+</body>
+</html>
